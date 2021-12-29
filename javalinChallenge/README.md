@@ -11,6 +11,11 @@
 
 # What you need to do!
 
+-   **_THERE ARE ONLY TWO FILES YOU NEED TO EDIT_**
+    -   **MainDriver.java**
+    -   **ChallengeEmployeeController.java**
+-   **_PLEASE START WITH THE GETALL REQUEST_**
+    -   if you run into issues please summon me!!!
 -   I want to you to create these endpoints for me
     -   localhost:3000/employees
         -   GET request that returns all employees (returns status code 200)

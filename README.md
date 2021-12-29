@@ -5,12 +5,17 @@
 # What you need to setup!
 
 -   I've provided for you the EVERYTHING but the javalin implementation.
--   Have ONE individual (driver) run the javalin_challenge.sql script in DBeaver.
+-   Have ONE individual (driver) run the javalinChallenge.sql script in DBeaver.
     -   Once this is done! REMIND the individual to change the password to their postgresqlDB and check for a connection.\
 -   After this everything should be fair game!
 
 # What you need to do!
 
+-   **_THERE ARE ONLY TWO FILES YOU NEED TO EDIT_**
+    -   **MainDriver.java**
+    -   **ChallengeEmployeeController.java**
+-   **_PLEASE START WITH THE GETALL REQUEST_**
+    -   if you run into issues please summon me!!!
 -   I want to you to create these endpoints for me
     -   localhost:3000/employees
         -   GET request that returns all employees (returns status code 200)
