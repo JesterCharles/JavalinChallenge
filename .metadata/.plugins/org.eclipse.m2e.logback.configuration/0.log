@@ -1,0 +1,14 @@
+2021-12-28 23:27:58,845 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-12-28 23:28:58,957 [Worker-10: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' C:\Users\CharlesJester\Desktop\Revature\trainerFiles\tech\java\javalin\javalin_challenge\javalinChallenge\pom.xml
+2021-12-28 23:28:59,582 [Worker-10: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.revature:javalinChallenge:0.0.1-SNAPSHOT @ C:\Users\CharlesJester\Desktop\Revature\trainerFiles\tech\java\javalin\javalin_challenge\javalinChallenge\pom.xml.
+2021-12-28 23:29:00,050 [Worker-10: Creating maven-archetype-quickstart] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /javalinChallenge/src/main/java
+2021-12-28 23:29:00,054 [Worker-10: Creating maven-archetype-quickstart] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /javalinChallenge/src/test/java
+2021-12-28 23:29:00,834 [Worker-10: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 1 sec
+2021-12-28 23:29:01,441 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-12-28 23:29:01,441 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\CharlesJester\Desktop\Revature\trainerFiles\tech\java\javalin\javalin_challenge\javalinChallenge\src\main\resources
+2021-12-28 23:29:01,444 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-12-28 23:29:01,444 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\CharlesJester\Desktop\Revature\trainerFiles\tech\java\javalin\javalin_challenge\javalinChallenge\src\test\resources
+2021-12-28 23:30:31,245 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-12-28 23:30:31,245 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\CharlesJester\Desktop\Revature\trainerFiles\tech\java\javalin\javalin_challenge\javalinChallenge\src\main\resources
+2021-12-28 23:30:31,246 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-12-28 23:30:31,246 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\CharlesJester\Desktop\Revature\trainerFiles\tech\java\javalin\javalin_challenge\javalinChallenge\src\test\resources
