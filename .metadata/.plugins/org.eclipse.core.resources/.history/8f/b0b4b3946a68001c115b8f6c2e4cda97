@@ -1,0 +1,40 @@
+package com.revature.services;
+
+import java.util.List;
+
+import com.revature.dao.ChallengeEmployeesDAO;
+import com.revature.models.ChallengeEmployee;
+
+public class ChallengeEmployeeServices implements ChallengeEmployeesDAO {
+
+	@Override
+	public void createChallengeEmployee(ChallengeEmployee challengeEmployee) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<ChallengeEmployee> getAllChallengeEmployees() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ChallengeEmployee getChallengeEmployeeById(int e_id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ChallengeEmployee updateChallengeEmployee(ChallengeEmployee challengeEmployee) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean deleteChallengeEmployee(int id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

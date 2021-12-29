@@ -1,0 +1,36 @@
+package com.revature.controller;
+
+import java.util.List;
+
+import com.google.gson.Gson;
+import com.revature.models.ChallengeEmployee;
+import com.revature.services.ChallengeEmployeeServices;
+
+import io.javalin.http.Handler;
+
+public class ChallengeEmployeesController {
+//		TODO: CREATE A CONTROLLER FOR JAVALIN
+	
+		ChallengeEmployeeServices ces = new ChallengeEmployeeServices();
+		
+		public Handler getAllChallengeEmployeesHandler = (ctx) -> {
+			if(ctx.req.getSession() != null) { //As long as the session exists
+				
+				List<ChallengeEmployee> allChallengeEmployees = ces.getAllChallengeEmployees();
+				
+				Gson gson = new Gson();
+				
+				String JSONChallengeEmployees = gson.toJson(allChallengeEmployees);
+				
+				ctx.result(JSONChallengeEmployees);
+				
+				ctx.status(200); // OK (success)
+				
+			} else {
+				ctx.result("Oops! There's no chefs in the DB, go fix it dingus!");
+				ctx.status(404);
+			}
+		};
+
+	}
+
