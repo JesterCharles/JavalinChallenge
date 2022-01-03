@@ -4,7 +4,6 @@ import java.sql.SQLException;
 import com.revature.controller.ChallengeEmployeesController;
 import com.revature.util.ConnectionUtil;
 
-import io.javalin.Javalin;
 
 public class MainDriver {
 	public static void main(String[] args) {
@@ -20,7 +19,6 @@ public class MainDriver {
 		}
 		
 		// IMPLEMENT JAVALIN HERE
-		
 		
 	}
 }

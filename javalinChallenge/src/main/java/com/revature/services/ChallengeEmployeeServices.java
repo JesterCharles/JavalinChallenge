@@ -23,7 +23,20 @@ public class ChallengeEmployeeServices implements ChallengeEmployeesDAO {
 
 	@Override
 	public ChallengeEmployee getChallengeEmployeeById(int e_id) {
-		return ceDao.getChallengeEmployeeById(e_id);
+		
+		try {
+		ChallengeEmployee obtainedCE = ceDao.getChallengeEmployeeById(e_id);
+			if(obtainedCE.getE_id() != 0) {
+				return obtainedCE;
+			} else {
+				throw new Exception();
+			}
+			
+		} catch (Exception e) {
+			System.out.println("Either ID does not exist or error connecting to database.");
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 	@Override

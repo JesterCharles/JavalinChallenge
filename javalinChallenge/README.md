@@ -23,7 +23,7 @@
     -   localhost:3000/employees/e_id
         -   GET request that returns on individuals ID (returns a status code 200)
         -   PUT request that updates the current employee information provided (returns status code 200)
-        -   DELETE request that removes the employee information (returns status code 204)
+        -   DELETE request that removes the employee information (returns status code 202)
 -   Be mindful I've taught the GET and POST requests. PLEASE PLEASE PLEASE be mindful of how the JSON objects are being passed in the body to and from the server.
 
 # EXTRA:

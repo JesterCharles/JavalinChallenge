@@ -26,7 +26,7 @@ public class ChallengeEmployeeDAOImpl implements ChallengeEmployeesDAO {
 		ps.setString(3, challengeEmployee.getE_role());
 		ps.setInt(4, challengeEmployee.getE_age());
 		
-		ps.executeUpdate(sql);
+		ps.executeUpdate();
 		
 		System.out.println("Added to Database");		
 		
@@ -74,12 +74,12 @@ public class ChallengeEmployeeDAOImpl implements ChallengeEmployeesDAO {
 			
 			ps.setInt(1, e_id);
 			
-			ResultSet rs = ps.executeQuery(sql);
+			ResultSet rs = ps.executeQuery();
 
 			ChallengeEmployee resultChallengeEmployee = new ChallengeEmployee();
 			
 			while(rs.next()) {
-				ChallengeEmployee c = new ChallengeEmployee(
+					ChallengeEmployee c = new ChallengeEmployee(
 						rs.getInt("e_id"),
 						rs.getString("e_fname"),
 						rs.getString("e_lname"),
@@ -87,9 +87,11 @@ public class ChallengeEmployeeDAOImpl implements ChallengeEmployeesDAO {
 						rs.getInt("e_age")
 						);
 				
-				resultChallengeEmployee = c;
-			}
-			
+					resultChallengeEmployee = c;
+					if(resultChallengeEmployee.getE_id() == 0) {
+						return null;
+					}
+				}
 			return resultChallengeEmployee;
 		} catch(SQLException e) {
 			System.out.println("Gathering the employee! has failed.");
@@ -110,22 +112,28 @@ public class ChallengeEmployeeDAOImpl implements ChallengeEmployeesDAO {
 			ps.setInt(4, challengeEmployee.getE_age());
 			ps.setInt(5, challengeEmployee.getE_id());
 			
-			ps.executeUpdate(sql);
+			ps.executeUpdate();
 			
-			String sqlCheck = "SELECT * FROM challenge_employee WHERE e_id = ?";
-			Statement s = conn.createStatement();
-			ResultSet rs = s.executeQuery(sqlCheck);
+			String sqlCheck = "SELECT * FROM challenge_employees WHERE e_id = ?";
+			PreparedStatement psc = conn.prepareStatement(sqlCheck);
 			
-			ChallengeEmployee updatedChallengeEmployee = new ChallengeEmployee(
+			psc.setInt(1, challengeEmployee.getE_id());
+			
+			ResultSet rs = psc.executeQuery();
+			
+			while(rs.next()) {
+				
+				
+				ChallengeEmployee updatedChallengeEmployee = new ChallengeEmployee(
 						rs.getInt("e_id"),
 						rs.getString("e_fname"),
 						rs.getString("e_lname"),
 						rs.getString("e_role"),
 						rs.getInt("e_age")
 					);
-			
-			return updatedChallengeEmployee;
-			
+				return updatedChallengeEmployee;
+			} 
+				
 			} catch(SQLException e) {
 				System.out.println("Updating has failed.");
 				e.printStackTrace();
@@ -141,7 +149,7 @@ public class ChallengeEmployeeDAOImpl implements ChallengeEmployeesDAO {
 		
 			ps.setInt(1, id);
 			
-			ps.executeUpdate(sql);
+			ps.executeUpdate();
 			
 			return true;
 			

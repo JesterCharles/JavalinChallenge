@@ -1,0 +1,36 @@
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.revature.controller.ChallengeEmployeesController;
+import com.revature.util.ConnectionUtil;
+
+import io.javalin.Javalin;
+
+public class MainDriver {
+	public static void main(String[] args) {
+		
+		ChallengeEmployeesController cec = new ChallengeEmployeesController();
+		
+		// First test connection to our database is working
+		try (Connection conn = ConnectionUtil.getConnection()){
+			System.out.println("You did the connection thing. Good job, here's a cookie!");
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("OoOoOf. That Connection ain't happening, you done screwed up!");
+		}
+		
+		// IMPLEMENT JAVALIN HERE
+		Javalin app = Javalin.create(
+					config -> {
+						config.enableCorsForAllOrigins();
+					}
+				).start(3000);
+		
+		app.get("/employee/{e_id}", cec.getChallengeEmployeeByIdHandler);
+		
+		app.exception(Exception.class, (e, ctx) -> {
+			ctx.result("There was an exception with the getID");
+			ctx.status(404);
+		});
+	}
+}
